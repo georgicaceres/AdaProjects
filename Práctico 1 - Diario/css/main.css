@@ -1,0 +1,64 @@
+@font-face {
+	font-family: "suecaslab-medium-webfont";
+	src: url('../fonts/suecaslab-medium-webfont.woff2');
+}
+
+body {
+    background-color: #F9F7F6;
+    margin-left: 5em;
+}
+
+#info {
+	font-family: arial;
+	font-weight: 700;
+	color: #17A0DF;
+	margin-left: 8em;
+}
+
+#info span {
+	color: grey;
+}
+
+h1 {
+  font-family: suecaslab-medium-webfont, serif;
+  font-size: 270%;
+	margin-left: 3em;
+}
+
+#fecha {
+	font-family: Arial;
+  font-size: 15px;
+  color: gray;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+#fecha span {
+	font-weight: 700;
+}
+
+#nota {
+  font-size: 1.2em;
+  margin-left: 1em;
+  margin-right: 26em;
+  font-family:Georgia;
+}
+
+#capitalLetter {
+   float:left;
+   font-family: arial;
+   font-size:80px;
+   font-weight: bold;
+   line-height:60px;
+   padding:2px;
+   margin-right: 5px;
+}
+
+#edificio1 p, #edificio2, #fecha {
+  margin-left: 1.9em;
+}
+#edificio1, #edificio2 p {
+  font-size: 1em;
+	font-family: Arial;
+  margin-right: 26em
+}

@@ -7,3 +7,9 @@ body {
 #secundario {
   background: #EDBF31;
 }
+
+h1,h2 {
+  font-size: 50px;
+  font-style: italic;
+  color: #FCFAF7;
+}

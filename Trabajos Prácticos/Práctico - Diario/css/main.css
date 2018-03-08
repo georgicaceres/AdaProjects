@@ -1,0 +1,47 @@
+@font-face{
+	font-family: "Suecas";
+	src:url('../fonts/suecaslab-medium-webfont.woff2');
+}
+
+body {
+  font-family: Arial;
+}
+
+header {
+  margin-left: 200px;
+  width: 69em;
+}
+
+h1 {
+  font-family: Suecas;
+  font-size: 43px;
+}
+
+.contenido {
+  max-width: 800px;
+}
+
+.texto  {
+  margin-top: 80px;
+  margin-left: 40px;
+}
+
+#fecha_hora {
+  color: gray;
+}
+
+#capital::first-letter {
+  float:left;
+  font-family: Arial;
+  font-size:80px;
+  font-weight: bold;
+  line-height:60px;
+  padding:2px;
+  margin-right: 5px;
+}
+
+p {
+  font-family: Georgia, serif;
+  font-size: 20px;
+	margin-bottom: 40px;
+}

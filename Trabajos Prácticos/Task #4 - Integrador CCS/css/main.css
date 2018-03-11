@@ -1,0 +1,67 @@
+@font-face {
+  font-family: Rajdhani-Light;
+  src: url(../fonts/Rajdhani-Light.ttf) format('truetype');
+  }
+
+@font-face {
+  font-family: Gruppo-Regular;
+  src: url(../fonts/Gruppo-Regular.ttf);
+}
+@font-face {
+  font-family: Homenaje-Regular;
+  src: url(../fonts/Homenaje-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  text-align: center;
+  border-style: ridge;
+  max-width: 30%;
+  border-color: grey;
+  margin: auto;
+  padding: 1.5%;
+}
+
+figure img {
+  border-radius: 50%;
+  border: 8px solid #D0D1DC;
+  max-width: 70%;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-family: Rajdhani-Light;
+  color:#953B83;
+  font-size: 30px;
+  }
+
+h3 {
+  margin-top: 5px;
+  font-family: Homenaje-Regular;
+  font-size: 15px;
+  padding: 0;
+  color:black;
+}
+
+p {
+  margin-top: 40px;
+  font-family: Gruppo-Regular;
+  font-size: 18px;
+}
+
+ul {
+  padding: 0;
+}
+ul li {
+  font-size: 30px;
+  display: inline-block;
+  margin: 7%;
+  }
+
+.fab {
+  color: #4A608B;
+}

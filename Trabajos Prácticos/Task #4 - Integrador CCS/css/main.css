@@ -44,7 +44,6 @@ h3 {
   margin-top: 5px;
   font-family: Homenaje-Regular;
   font-size: 15px;
-
   color:black;
 }
 
@@ -54,9 +53,6 @@ p {
   font-size: 18px;
 }
 
-ul {
-
-}
 ul li {
   font-size: 30px;
   display: inline-block;

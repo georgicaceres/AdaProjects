@@ -17,19 +17,39 @@
   padding: 0;
 }
 
+body {
+  background-color: #2F3531;
+  padding: 2%
+}
+
 .card {
   text-align: center;
   border-style: ridge;
   max-width: 30%;
   border-color: grey;
+  background-color: white;
   margin: auto;
-  padding: 1.5%;
+  padding: 2%;
 }
 
-figure img {
+figure {
+  position: relative;
+}
+
+.perfil {
   border-radius: 50%;
-  border: 8px solid #D0D1DC;
+  border: 6px solid #D0D1DC;
   max-width: 70%;
+}
+
+.bandera {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 70%;
+  border: 4px solid #D0D1DC;
+  bottom: 0;
+  right: 50px;
 }
 
 h1 {

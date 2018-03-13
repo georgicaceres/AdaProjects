@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+figure, nav, .banner {
+  height: 50px;
+  background-color: #B1C1C1;
+  margin-bottom: 10px;
+}
+
+nav {
+  height: 30px;
+}
+
+.banner {
+  position: relative;
+  height: 100px;
+}
+
+.middle {
+  position: relative;
+  top: 15px;
+}
+
+aside, section, footer {
+  background-color: #B1C1C1;
+  position: relative;
+  top: 0;
+}
+
+aside {
+  float: left;
+  width: 21%;
+  height: 200px;
+}
+
+section {
+  float: right;
+  width: 76%;
+  height: 200px;
+
+}
+footer {
+  top: 25px;
+  clear: both;
+  height: 100px;
+}

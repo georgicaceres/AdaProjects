@@ -1,36 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title> Formulario </title>
   <link href="css/main.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Play" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
-    <h1> Untitled Page </h1>
     <form action="success.html" method="POST">
-      <fieldset>
-        <label>
-          Nombre:<br>
-          <input type="text" name="nombre" required> <br>
-        </label>
-        <label>
-          Apellido:<br>
-          <input type="text" name="apellido" required> <br>
-        </label>
-        <label>
-          E-mail:<br>
-          <input type="email" name="email" required> <br>
-        </label>
-        <label>
-          Género:<br>
-          <input type="radio" name="género" value="F" checked> Femenino
-          <input type="radio" name="género" value="M"> Masculino
-          <input type="radio" name="género" value="O"> Otro <br>
-        </label>
-        <label>
-          Nacionaliad:<br>
-          <select name="nacionalidades">
+      <label>Nombre:</label>
+      <input type="text" name="nombre" required>
+      <label>Apellido:</label>
+      <input type="text" name="apellido" required>
+      <label>E-mail:</label>
+      <input type="email" name="email" required>
+      <label>Género:</label>
+      <input type="radio" name="género" value="F" checked> Femenino
+      <input type="radio" name="género" value="M"> Masculino
+      <input type="radio" name="género" value="O"> Otro <br>
+      <label>Nacionaliad:</label>
+      <select name="nacionalidades">
             <option value="argentina">Argentina</option>
             <option value="20">Afganistán</option>
             <option value="30">Albania</option>
@@ -232,19 +223,17 @@
             <option value="2000">Taiwán</option>
             <option value="uruguay">Uruguay</option>
           </select> <br>
-        </label>
-        <label>
-          Temas que le interesan:<br>
-          <input type="checkbox" name="intereses" value="M"> Infraestructura <br>
-          <input type="checkbox" name="intereses" value="F"> Programación Web <br>
-          <input type="checkbox" name="intereses" value="O"> Programación mobile <br>
-          <input type="checkbox" name="terminos_condiciones" required> Acepto términos y condiciones <br>
-        </label>
-        <label>
-          <button>Cancelar</button>
-          <button>Aceptar</button>
-        </label>
-      </fieldset>
+      <div class="intereses">
+        <label>Temas que le interesan:</label>
+        <input type="checkbox" name="intereses" value="M"> Infraestructura <br />
+        <input type="checkbox" name="intereses" value="F"> Programación Web <br />
+        <input type="checkbox" name="intereses" value="O"> Programación mobile
+      </div>
+      <div class="termycond">
+        <input type="checkbox" name="terminos_condiciones" required> Acepto términos y condiciones
+      </div>
+      <button>Cancelar</button>
+      <button>Aceptar</button>
   </div>
 </body>
 

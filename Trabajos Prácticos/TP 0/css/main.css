@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: auto;
+}
+
+
+
+body {
+  background-color: #C7D0D0;
+}
+
+/*PADDING: hacia adentro del contenedor. MARGIN: hacia afuera.
+Por lo tanto: poner un PADDING en "body" es equivalente a poner
+un MARGIN en ".container"*/
+
+.container {
+  font-family: OpenSans-Regular;
+  text-align: center;  /*Aplica a todas las CAJAS que están en en
+  el interior de ".container"*/
+  background-color: #181818;
+  margin: 30px;
+}
+
+figure {
+  position: relative;
+  width: 100%;
+}
+
+img {
+  max-width: 100%; /*Ajusta la imagen al tamaño de su contenedor "figure".Previene
+  que la imagen estire dado que es más grande.*/
+}
+
+.campo {
+
+  position: relative;
+  top: 20px; /*Posiciono relativamente respecto del bottom de la caja previa.*/
+  font-size: 1em;
+}
+
+label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+input {
+  margin-right: 10px;
+  padding: 8px 20px;
+  border: 1px solid transparent;
+}
+
+button {
+  background-color: #bc3b69;
+  color: #fff;
+  border: 1px solid transparent;
+  font-size: 1em;
+  padding: 8px 20px;
+  border-radius: 3px;
+}
+
+.network {
+  margin-top:8%;
+  margin-bottom: 20%;
+  float: right; /*Podría usar text-align. Con "float", la caja previa
+  ".campo", al ser elemento de bloque, no me permite flotar a su lado.*/
+  width: 300px;
+}
+
+li {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: 15%;
+}
+
+.fab {
+  color: #bc3b69;
+}
+
+footer {
+  clear: both; /*Impide que otras cajas floten a ambos lados.*/
+  color: white;
+  height: 30px;
+}

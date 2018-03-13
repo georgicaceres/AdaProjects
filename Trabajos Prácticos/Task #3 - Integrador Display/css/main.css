@@ -11,7 +11,10 @@ figure {
   float: left;
   display: inline-block;
   margin: 0 auto;
+}
 
+header figure {
+  padding: 1%;
 }
 
 .derecha {
@@ -23,6 +26,7 @@ h1 {
   font-family: Georgia;
   display: inline-block;
   color: white;
+  padding: 2%;
   }
 
 nav {
@@ -64,6 +68,7 @@ nav ul li {
 }
 
 .last figure, .middle figure {
+  margin: 20px;
   float: none;
   display: inline-block;
 }

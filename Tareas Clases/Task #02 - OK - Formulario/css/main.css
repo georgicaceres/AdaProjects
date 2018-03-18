@@ -1,0 +1,38 @@
+.container {
+  font-family: Play;
+  font-size: 1.1em;
+  color: white;
+  padding: 1%;
+  background-color: black
+}
+
+input, select {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.personal, .intereses, .termycond, .opc {
+  margin-bottom: 20px;
+}
+
+ .success {
+   font-size: 1.5em;
+   padding: 20%;
+   text-align: center;
+ }
+
+.termycond, label {
+  display: block;
+}
+
+button {
+  font-family: Play;
+  font-weight: bold;
+  margin: 0 10px;
+  background-color: darkgrey;
+  border-color: white;
+  color: black;
+  padding: 8px;
+  border-radius: 2px;
+}

@@ -1,0 +1,106 @@
+<!--
+Bootstrap System:
+  .col- (extra small devices - screen width less than 576px)
+  .col-sm- (small devices - screen width equal to or greater than 576px)
+  .col-md- (medium devices - screen width equal to or greater than 768px)
+  .col-lg- (large devices - screen width equal to or greater than 992px)
+  .col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+
+IMPORTANT: Each class scales up, so if you wish to set the same widths for sm and md, you only need to specify sm
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Bootstrap</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!--FILA 1. HEADER-->
+      <div class="row my_header mb-2">
+        <div class="col-sm-3 col-sx-4">
+          <figure>
+            <img class="img-responsive" src="images/kodama.png" alt="Kodama1">
+          </figure>
+        </div>
+        <div class="col-sm-6 col-sx-8">
+          <h1 class="text-center"> ¿Qué onda BS?</h1>
+        </div>
+        <div class="col-sm-3 d-none d-sm-block">
+          <figure>
+            <img class="img-responsive kodama_right" src="images/kodama_right.png" alt="Kodama2"></img>
+          </figure>
+        </div>
+      </div>
+      <!--FILA 2. NAVIGATION BAR-->
+      <div class="row mb-4">
+        <div class="col-sm-12">
+          <nav class="navbar navbar-expand-sm navbar-dark">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active text-center" href="#">Home</a>
+              </li>
+              <li class="nav-item text-center">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item text-center">
+                <a class="nav-link" href="#">Movies</a>
+              </li>
+              <li class="nav-item text-center">
+                <a class="nav-link" href="#">Gallery</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!--FILA 3. SECCIONES DOBLES-->
+      <div class="row mb-4">
+        <div class="col-sm-6">
+          <section class="double_section">
+          </section >
+        </div>
+        <div class="col-sm-6">
+          <section class="double_section">
+          </section>
+        </div>
+      </div>
+      <!--FILA 4. SECCION SIMPLE-->
+      <div class="row mb-4">
+        <div class="col-sm-12">
+          <section class="simple_section">
+            <figure class="text-right d-none d-sm-block">
+              <img class="img-responsive" src="images/kodama-grupo.png" alt="Kodamas">
+            </figure>
+          </section>
+        </div>
+      </div>
+      <!--FILA 5. SECCION TRIPLE-->
+      <div class="row mb-4">
+        <div class="col-sm-4 d-none d-sm-block">
+          <section class="triple_section"></section>
+        </div>
+        <div class="col-sm-4 d-none d-sm-block">
+          <section class="triple_section"></section>
+        </div>
+        <div class="col-sm-4 d-none d-sm-block">
+          <section class="triple_section"></section>
+        </div>
+      </div>
+      <!--FILA 6. FOOTER-->
+      <div class="row">
+        <div class="col-sm-12">
+          <footer>
+            <figure>
+              <img src="images/susus.png" alt="" class="img-responsive">
+            </figure>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+8 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+}
+
+.caja {
+  height: 264px;
+  width: 264px;
+  position: absolute;
+  }
+
+.a {
+  background-color: #FE5E72;
+}
+
+.b {
+  background-color: #F9EAEB;
+}
+
+.uno_2, .dos_2, .tres_2 {
+  left: 270px;
+}
+
+.uno_3, .dos_3, .tres_3 {
+  left: 540px;
+}
+
+.dos_1, .dos_2, .dos_3 {
+  top: 270px;
+}
+
+.tres_1, .tres_2, .tres_3 {
+  top: 540px
+}

@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: auto;
+}
+
+
+
+body {
+  background-color: #C7D0D0;
+}
+
+.container {
+  font-family: OpenSans-Regular;
+  text-align: center;
+  background-color: #181818;
+  margin: 30px;
+}
+
+figure {
+  position: relative;
+  width: 100%;
+}
+
+img {
+  max-width: 100%; /*Ajusta la imagen al tamaño de su contenedor "figure".Previene
+  que la imagen estire dado que es más grande.*/
+}
+
+.campo {
+
+  position: relative;
+  top: 20px;
+  font-size: 1em;
+}
+
+label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+input {
+  margin-right: 10px;
+  padding: 8px 20px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #bc3b69;
+  color: #fff;
+  border: 1px solid transparent;
+  font-size: 1em;
+  padding: 8px 20px;
+  border-radius: 3px;
+}
+
+.network {
+  margin-top:8%;
+  margin-bottom: 20%;
+  float: right;
+  width: 300px;
+}
+
+li {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: 15%;
+}
+
+.fab {
+  color: #bc3b69;
+}
+
+footer {
+  clear: both; /*Impide que otras cajas floten a ambos lados.*/
+  color: white;
+  height: 30px;
+}

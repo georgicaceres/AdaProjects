@@ -1,0 +1,106 @@
+
+.pad {
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.uno, .dos, .tres, .cuatro, .cinco, .seis, .siete {
+  height: 400px;
+}
+.aaa, .bbb, .ccc, .ddd, .eee, .fff, .ggg {
+  height: 40px;
+}
+
+.black_1, .black_2, .black_3, .black_4, .black_5, .black_6, .black_7, .black_7, .black_8, .black_9, .black_10, .black_11, .black_12 {
+  height: 80px;
+}
+.uno, .ggg {
+  background-color: #F5F6FC;
+}
+
+.dos {
+  background-color: yellow
+}
+.tres, .eee{
+  background-color: #0BF9F9
+}
+.cuatro {
+  background-color: #59FF00
+}
+.cinco, .ccc{
+  background-color: #FD2CF7
+}
+.seis {
+  background-color: red
+}
+.siete, .aaa {
+  background-color: #122DF7
+}
+
+.bbb, .ddd, .fff, .black_1 {
+  background-color: black;
+}
+
+.gradiente_uno {
+  height: 50px;
+  background: rgba(255,255,255,1);
+background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 91%, rgba(255,255,255,1) 91%, rgba(255,255,255,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(91%, rgba(0,0,0,1)), color-stop(91%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 91%, rgba(255,255,255,1) 91%, rgba(255,255,255,1) 100%);
+background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 91%, rgba(255,255,255,1) 91%, rgba(255,255,255,1) 100%);
+background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 91%, rgba(255,255,255,1) 91%, rgba(255,255,255,1) 100%);
+background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 91%, rgba(255,255,255,1) 91%, rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+}
+
+.gradiente_dos {
+  height: 50px;
+  background-image: linear-gradient(to right, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
+}
+
+.gradiente_nulo {
+  height: 80px;
+  background: black;
+}
+
+.black_1 {
+  background-color: #000000;
+}
+.black_2 {
+  background-color: #1E1E1E;
+}
+.black_3 {
+  background-color: #494949;
+}
+.black_4 {
+  background-color: #606060;
+}
+.black_5 {
+  background-color: #777777;
+}
+.black_6 {
+  background-color: #939393;
+}
+.black_7 {
+  background-color: #A8A8A8;
+}
+.black_8 {
+  background-color: #C9C9C9;
+}
+.black_9 {
+  background-color: #D6D6D6;
+  }
+.black_10 {
+  background-color: #EAEAEA;
+}
+
+.black_11 {
+  background-color: #f6f6f6;
+}
+
+.black_12 {
+  background-color: #ffffff;
+}

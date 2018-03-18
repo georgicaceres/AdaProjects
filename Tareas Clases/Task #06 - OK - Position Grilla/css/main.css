@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.container {
+  height: 750px;
+  padding: 2.5% 0;
+  background-color: #DBDAEA;
+}
+header, .grilla, .boxs, footer {
+  width: 90%;
+  position: relative;
+}
+
+header {
+  height: 80px;
+}
+
+.logo, nav {
+  position: absolute;
+  width: 50%;
+  height: 80px;
+}
+
+.logo {
+  left: 0;
+  background-color: #344370;
+}
+
+nav {
+  right: 0;
+  background-color: #344370;
+}
+
+.grilla {
+  top: 20px;
+  height: auto;
+}
+
+.fila, .fila li {
+  list-style: none;
+}
+
+.fila {
+  position: relative;
+  list-style: none;
+  margin-bottom: 20px;
+  height: 80px;
+}
+
+ul li ul li {
+  display: inline-block;
+}
+
+.col1 {
+  position: absolute;
+  left: 0;
+  width: 22%;
+  height: 80px;
+  background-color: #344370;
+}
+
+.col2 {
+  position: absolute;
+  left: 26%;
+  width: 22%;
+  height: 80px;
+  background-color: #344370;
+}
+
+.col3 {
+  position: absolute;
+  right: 26%;
+  width: 22%;
+  height: 80px;
+  background-color: #344370;
+}
+
+.col4 {
+  position: absolute;
+  right: 0;
+  width: 22%;
+  height: 80px;
+  background-color: #344370;
+}
+
+.boxs {
+  text-align: center;
+  top: 20px;
+  height: 100px;
+}
+
+.box1, .box2, .box3 {
+  width: 32%;
+  height: 100px;
+  background-color: #344370;
+}
+
+.box1 {
+  float: left;
+}
+
+.box2 {
+  display: inline-block;
+}
+
+.box3 {
+  float: right;
+}
+
+footer {
+  top: 40px;
+  height: 50px;
+  background-color: #344370;
+}

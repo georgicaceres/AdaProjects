@@ -1,0 +1,57 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #DCD8D4;
+}
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+figure, nav, .banner {
+  height: 50px;
+  background-color: #718FA0;
+  margin-bottom: 10px;
+}
+
+nav {
+  height: 30px;
+}
+
+.banner {
+  position: relative;
+  height: 100px;
+}
+
+.middle {
+  position: relative;
+  top: 15px;
+}
+
+aside, section, footer {
+  background-color: #718FA0;
+  position: relative;
+  top: 0;
+}
+
+aside {
+  float: left;
+  width: 21%;
+  height: 200px;
+}
+
+section {
+  float: right;
+  width: 76%;
+  height: 200px;
+
+}
+footer {
+  top: 25px;
+  clear: both;
+  height: 150px;
+  margin-bottom: 20px;
+}

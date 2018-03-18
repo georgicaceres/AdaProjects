@@ -1,0 +1,31 @@
+/*Bootstrap 4*/
+
+/*Ayuda Memoria:
+    mx-auto: Para centrar en relación al contendor padre.
+      No funciona en elementos inline-block (img), en ese
+      caso agregar 'd-block' o usar text-center en el contenedor.
+
+*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+.breadcrumb {
+  background-color: white;
+}
+
+.size_sm {
+  width: 200px;
+  height: 200px;
+}
+
+.size_xs {
+  width: 180px;
+  height: 180px;
+}
+
+.pad {
+  padding: 0;
+}

@@ -1,0 +1,46 @@
+body {
+  background-color: white;
+}
+
+.my_header {
+  background-color: black;
+  padding: 3%;
+}
+h1 {
+  color: white;
+}
+
+.kodama_right {
+  float: right;
+}
+
+.second_file {
+  background-color:
+}
+
+.nav-item {
+  width: 130px;
+  margin: 0 2%;
+  background-color: #ffc107;
+}
+
+.double_section {
+  height: 200px;
+  background-color: #D8B3D7
+}
+
+.simple_section {
+  height: 160px;
+  padding: 3%;
+  background-color: #C16F9E
+}
+
+.triple_section {
+  height: 200px;
+  background-color: #7B529D;
+}
+
+footer {
+  background-color: #9D5552;
+  padding: 1%;
+}

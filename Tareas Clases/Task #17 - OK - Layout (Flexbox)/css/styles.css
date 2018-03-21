@@ -129,17 +129,27 @@ footer .redes a:hover{
 		margin-right:5px;
 		font-size:16px;
 	}
-	.principal{
+
+.flex-container {
+	height: auto;
+	flex-direction: row;
+
+}
+
+.banner {
+	margin-top: 20px;
+}
+	.banner, h1, .izquierda {
 		width:100%;
+		margin-bottom: 20px;
 	}
 
-	aside{
+.caja {
+	width: 33.3333333%;
+	height: auto;
+}
+	.cajita {
 		width:100%;
-		flex-direction:row;
-	}
-
-	aside .caja{
-		width:30%;
 		padding:60px 0;
 		font-size:10px;
 	}
@@ -170,7 +180,7 @@ footer .redes a:hover{
 				text-align:center;
 			}
 			footer .autor{
-				order:1;
+				border:1;
 			}
 			footer .redes{
 				margin-bottom:20px;
@@ -181,7 +191,7 @@ footer .redes a:hover{
 
 
 @media screen and (max-width:400px){
-	aside{
+	.caja {
 		display: none;
 	}
 }

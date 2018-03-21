@@ -1,0 +1,1 @@
+Reformulación del Layout propuesto utilizando un container flex que incluya la section y el aside.

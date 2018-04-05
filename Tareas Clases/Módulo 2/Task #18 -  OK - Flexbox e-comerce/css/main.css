@@ -1,0 +1,73 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+.flex-container {
+  width: 90%;
+  display: flex;
+  margin: auto;
+}
+
+aside {
+  width: 20%;
+  background-color: #CAC7C7;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1%;
+}
+
+.logo {
+  width: 80%;
+  align-self: center;
+
+}
+.checkout {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo, .checkout, select {
+    margin-bottom: 30px;
+}
+
+.productos {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #eeeeeeee;
+}
+
+.linea {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+figure {
+  width: 180px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid black;
+  position: relative;
+  background-color: white;
+}
+
+.product {
+  height: 70%;
+}
+
+.envío {
+  width: 10%;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}

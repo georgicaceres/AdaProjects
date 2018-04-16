@@ -1,0 +1,182 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body {
+  background-color: #F1E6E6;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+  margin-bottom: 1%;
+  height: 80px;
+  background-color: #323232;
+}
+
+.flex-container {
+  width: 80%;
+  margin: 0 auto;
+	display: flex;
+  flex-direction: column;
+	flex-wrap: wrap;
+	align-content: space-between;
+  justify-content: space-between;
+  height: 500px;
+}
+
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 30%;
+  height: 350px;
+  font-family: Georgia sans-serif;
+}
+
+#profile img {
+  margin: 3%;
+  width: 70%;
+  border-radius: 50%;
+  border: 6px solid #D0D1DC;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Homenaje', sans-serif;
+}
+
+h4 {
+  margin: 0;
+  color: grey;
+  font-family: 'News Cycle', sans-serif;
+}
+
+#composer {
+  display: flex;
+  width: 66%;
+  background-color: white;
+  height: 60px;
+}
+
+#composer textarea {
+  width: Calc(100% - 80px); /*Cálculo entre dos unidades distintas. Los 20px corresponderan al botón*/
+  border: none;
+  resize: none;
+  padding: 2%;
+}
+
+#composer button {
+  color: white;
+  background-color: black;
+  border-radius: 4px;
+  border: 2px solid grey;
+  margin: 2%;
+  width: 80px;
+  height: 30px;
+  font-family: 'Homenaje', sans-serif;
+}
+
+#friends {
+  display: flex;
+  padding: 1%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  width: 30%;
+  height: 130px;
+}
+
+#friends img {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+}
+
+#friends p {
+  margin: 0;
+  font-family: 'Homenaje', sans-serif;
+  font-weight: bold;
+  font-size: 1.4em;
+  width: 98%;
+}
+
+#friends a {
+  width: 100%;
+  text-align: right;
+  font-family: 'News Cycle', sans-serif;
+  color: black;
+}
+
+#comments {
+  background-color: white;
+  width: 66%;
+  height: 420px;
+  padding: 0 2%;
+}
+
+#commentList {
+  list-style: none;
+}
+
+#commentList li {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0;
+}
+
+#commentList li img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#commentList .box {
+  width: Calc(100% - 60px);
+  margin-top: 7px;
+}
+
+#commentList .name {
+  font-family: 'Homenaje', sans-serif;
+  font-weight: 600;
+}
+
+#commentList .date {
+  font-size: 0.7em;
+  margin-left: 5px;
+  color: gray;
+}
+
+@media only screen and (max-width : 800px) {
+	.flex-container {
+		height: auto;
+		align-content: space-around;
+	}
+
+	#profile, #friends, #composer, #comments {
+		width: 100%;
+		height: auto;
+		margin: 2% 0;
+	}
+
+	#profile img {
+	  margin: 2%;
+	  width: 50%;
+	  border-radius: 50%;
+	  border: 6px solid #D0D1DC;
+	}
+
+	#friends {
+		order: 1;
+		justify-content: space-around;
+	}
+
+	#friends p, #friends a {
+		margin: 1%;
+		width: 88%;
+	}
+}

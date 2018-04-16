@@ -1,0 +1,98 @@
+* {
+  margin:0;
+	padding:0;
+	box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+
+body {
+  background-color: #DDE2E3;
+}
+
+.flex-container {
+  width: 50%;
+  background-color: white;
+  padding: 2%;
+}
+
+.flex-container, .colBox {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+h3 {
+  color: #16A9E1;
+  font-size: 2em;
+}
+
+
+label {
+  font-weight: 600;
+}
+
+.colBox {
+  margin: 10px auto;
+}
+
+input, select, textarea  {
+  border-radius: 4px;
+  height: 30px;
+  border-style: ridge;
+}
+textarea {
+height: 40px;
+}
+
+.rowBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.two {
+  width: 50%;
+}
+
+.three {
+  width: 33%;
+}
+
+.error, #telError, #genderError, #ageError {
+  color: red;
+  font-size: .7em;
+  font-weight: 600;
+}
+
+.genero, .intereses {
+  width: 20px;
+  vertical-align: middle;
+}
+
+.opciones {
+  font-weight: normal;
+}
+
+#send {
+  background-color: #F343C6;
+  color: white;
+  font-weight: 600;
+  height: 30px;
+  border-radius: 0;
+  border-style: none;
+}
+
+@media only screen and (max-width : 800px) {
+  .rowBox {
+    flex-direction: column
+  }
+
+  .two, .three {
+    width: 100%;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #16A9E1;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+      <meta charset="utf-8">
+      <title>Challenge 1</title>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+      <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header>
+      <h1>¿Qué deseas comer hoy?</h1>
+    </header>
+    <div class="flex-container">
+      <form id="myForm" class="flex-form" action="" method="post">
+        <div class="colBox">
+          <label for="ppal">1-Elige tu plato principal...</label>
+          <select name="guarnición" id="ppal">
+            <option value="" disabled selected>Seleccione una opción...</option>
+          </select>
+        </div>
+        <div class="colBox">
+          <label for="guarn">2-Agrégale una guarnición...</label>
+          <select name="guarn" id="guarn">
+            <option value="" disabled selected>Seleccione una opción...</option>
+          </select>
+        </div>
+        <div class="colBox">
+          <label for="postre">3-¿Te aptece un postre?</label>
+          <select name="guarn" id="postre">
+            <option value="" disabled selected>Seleccione una opción...</option>
+          </select>
+        </div>
+        <input id="confirm" type="button" value="CONFIRMAR"></input>
+      </form>
+      <div class="side">
+        <div id="text-confirm">
+          <h2>TU ALMUERZO:</h2>
+          <p class="text-confirm">Principal: <span id="ppal-confirm"></span></p>
+          <p class="text-confirm">Guarnición: <span id="guarn-confirm"></span></p>
+          <p class="text-confirm">Postre: <span id="postre-confirm"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

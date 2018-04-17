@@ -1,0 +1,42 @@
+*{
+	margin:0;
+	padding:0;
+	caja-sizing: border-caja;
+}
+
+body {
+  background-color: #F1E6E6;
+}
+
+.flex-container {
+  margin: auto;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-content:stretch;
+}
+
+.caja1 {
+  width: 35%;
+  height: 100px;
+  background-color: red;
+}
+
+.caja2 {
+  width: 64%;
+  height: 150px;
+  background-color: orange;
+}
+
+.caja3 {
+  width: 35%;
+  height: 40px;
+  background-color: yellow;
+}
+
+.caja4 {
+  width: 64%;
+  height: 20px;
+  background-color: pink;
+}

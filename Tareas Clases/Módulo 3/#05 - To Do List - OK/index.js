@@ -5,8 +5,8 @@ function addTask() {
   var task = document.getElementById('task'); // Traer el input (tarea) ingresado por el usuario.
   var container = document.getElementById('flex-container'); // Traer el contenedor general.
 
-  // Si encuentro algo en el input al presionar el botón:
   if (task.value) {
+    // Si encuentro algo en el input al presionar el botón:
     var taskList = document.getElementById('list'); //Traer el nodo <ul>.
     var li = document.createElement('li'); // Crear un elemento hijo <li>.
     var checkbox = document.createElement('input'); // Crear un nodo input (para la lista de tareas).
@@ -38,9 +38,9 @@ function addTask() {
     // Agregar evento al botón eliminar.
     borrar.addEventListener('click', event => {
       li.remove();
-    })
+    });
+    task.value = "";
   }
-  task.value = "";
 
   // Agregar botón "Borrar todo", si no existe
   var cleanAllButton = document.getElementById('cleanAll');
@@ -82,6 +82,13 @@ add.addEventListener('click', addTask);
 
 
 
+
+
+
+
+
+
+
   // var count = 0;
   // var idCheck = "checkbox_" + count;
   // var idDelete = "delete_" + count;
@@ -92,9 +99,6 @@ add.addEventListener('click', addTask);
   // li.appendChild(newTask);
   // li.appendChild(label);
   // label.textContent = task.value;
-
-
-
 
 
 // var taskCheck= Array.from(getElementsByClassName("check"));

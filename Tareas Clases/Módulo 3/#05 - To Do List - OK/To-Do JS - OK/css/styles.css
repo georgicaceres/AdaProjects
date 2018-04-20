@@ -60,7 +60,10 @@ label {
   color: white;
   font-weight: bolder;
   background-color: black;
+}
 
+.delete:hover {
+  background-color: red;
 }
 
 ul {

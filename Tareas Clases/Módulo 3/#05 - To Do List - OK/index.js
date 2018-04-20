@@ -1,8 +1,8 @@
 var add = document.getElementById('add') // Traer el botón "ADD" para agregarle funcionabilidad.
-
+var task = document.getElementById('task'); // Traer el input (tarea) ingresado por el usuario.
+task.focus()
 // Función que será llamada cuando se haga click en el botón "ADD"
 function addTask() {
-  var task = document.getElementById('task'); // Traer el input (tarea) ingresado por el usuario.
   var container = document.getElementById('flex-container'); // Traer el contenedor general.
 
   if (task.value) {
@@ -38,20 +38,27 @@ function addTask() {
     // Agregar evento al botón eliminar.
     borrar.addEventListener('click', event => {
       li.remove();
+      var lis = document.getElementsByClassName('delete');
+      console.log(lis);
+      if (lis.length == 0) {
+        var cleanAll = document.getElementById('cleanAll')
+        console.log(cleanAll);
+        cleanAll.remove()
+      }
     });
     task.value = "";
+    // Agregar botón "Borrar todo", si no existe
+    var cleanAllButton = document.getElementById('cleanAll');
+    if (!cleanAllButton) {
+      var cleanAll = document.createElement('input');
+      cleanAll.type = "button";
+      cleanAll.value = "LIMPIAR TODO";
+      cleanAll.id = "cleanAll";
+      container.appendChild(cleanAll);
+      cleanAll.addEventListener('click', clean)
+    }
   }
 
-  // Agregar botón "Borrar todo", si no existe
-  var cleanAllButton = document.getElementById('cleanAll');
-  if (!cleanAllButton) {
-    var cleanAll = document.createElement('input');
-    cleanAll.type = "button";
-    cleanAll.value = "LIMPIAR TODO";
-    cleanAll.id = "cleanAll";
-    container.appendChild(cleanAll);
-    cleanAll.addEventListener('click', clean)
-  }
 }
 
 // Remueve TODAS las tareas y resetea el campo de ingreso.

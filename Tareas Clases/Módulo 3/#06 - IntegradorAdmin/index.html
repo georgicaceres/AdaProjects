@@ -72,7 +72,7 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="dist/img/user2-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Support Team
@@ -258,13 +258,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="dist/img/user2-128x128.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="dist/img/user2-128x128.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   Alexander Pierce - Web Developer
@@ -312,7 +312,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="dist/img/user2-128x128.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -666,7 +666,7 @@
               <!-- /.item -->
               <!-- chat item -->
               <div class="item">
-                <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+                <img src="dist/img/user2-128x128.jpg" alt="user image" class="offline">
 
                 <p class="message">
                   <a href="#" class="name">
@@ -713,21 +713,21 @@
             <!-- /.box-header -->
             <div class="box-body">
               <!-- See dist/js/pages/dashboard.js to activate the todoList plugin -->
-              <ul class="todo-list">
-                <li>
+              <ul class="todo-list" id="todo-list">
+                <!-- <li> -->
                   <!-- drag handle -->
-                  <span class="handle">
+                  <!-- <span class="handle">
                         <i class="fa fa-ellipsis-v"></i>
                         <i class="fa fa-ellipsis-v"></i>
-                      </span>
+                      </span> -->
                   <!-- checkbox -->
-                  <input type="checkbox" value="">
+                  <!-- <input type="checkbox" value=""> -->
                   <!-- todo text -->
-                  <span class="text">Design a nice theme</span>
+                  <!-- <span class="text">Design a nice theme</span> -->
                   <!-- Emphasis label -->
-                  <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+                  <!-- <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small> -->
                   <!-- General tools such as edit or delete-->
-                  <div class="tools">
+                  <!-- <div class="tools">
                     <i class="fa fa-edit"></i>
                     <i class="fa fa-trash-o"></i>
                   </div>
@@ -796,13 +796,13 @@
                     <i class="fa fa-edit"></i>
                     <i class="fa fa-trash-o"></i>
                   </div>
-                </li>
+                </li> -->
               </ul>
             </div>
             <!-- /.box-body -->
             <div class="box-footer clearfix no-border">
-              <input type="text" value="" id="inputToDo">
-              <button type="button" class="btn btn-default pull-right" id="btnAdd"><i class="fa fa-plus"></i> Add item</button>
+              <input type="text" value="" class="form-control" id="taskInput">
+              <button type="button" class="btn btn-default pull-right" id="addItem"><i class="fa fa-plus"></i> Add item</button>
             </div>
           </div>
           <!-- /.box -->
@@ -818,6 +818,7 @@
                 <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip"
                         title="Remove">
                   <i class="fa fa-times"></i></button>
+
               </div>
               <!-- /. tools -->
             </div>

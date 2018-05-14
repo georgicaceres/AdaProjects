@@ -1,0 +1,222 @@
+* {
+  margin:0;
+	padding:0;
+	box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  display: flex;
+
+}
+
+h1 {
+  color: white;
+}
+
+body {
+  background-color: #191616;
+}
+
+.flex-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width:95%;
+  justify-content: space-around;
+}
+
+.colBox {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+}
+
+label {
+  font-weight: 600;
+  color: white
+}
+
+input, #selectImgName {
+  border-radius: 4px;
+  height: 30px;
+  border-style: ridge;
+}
+
+#day  {
+  border-radius: 4px;
+  height: 30px;
+  width: 60px;
+  border-style: ridge;
+  text-align: center;
+}
+
+#month {
+  border-radius: 4px;
+  height: 30px;
+  border-style: ridge;
+  text-align: center;
+}
+
+#selectImgName {
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: orange;
+  background-color: #EDE9EA;
+  padding: 1%;
+}
+
+.choose {
+  width: 100%;
+  margin: 0 22px;
+}
+
+#errorName, #errorDate, #errorImg {
+  color: red;
+  font-size: .7em;
+  font-weight: 600;
+}
+
+.grid-container {
+  margin: 10px auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px 200px 200px;
+  grid-template-rows: 200px 200px;
+  justify-content: center;
+  align-content: center;
+}
+
+.grid-container img {
+  width: 80%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button {
+  width: 200px;
+  border-radius: 4px;
+  height: 30px;
+  border-style: ridge;
+  color: WHITE;
+  background-color: #B5343A;
+
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  height: 648px;
+  background-image: url("homeBackground.jpg");
+}
+
+#textCol, #navCol {
+  margin: 0;
+  width: 50%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#navCol {
+  align-items: flex-end;
+}
+
+#currentDate {
+  width: 250px;
+  height: 50px;
+  font-size: 30px;
+  border-style: ridge;
+  border-radius: 4px;
+  border-color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+
+#todayBirth {
+  font-size: 45px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+#yourImage {
+  width: 400px;
+  height: 400px;
+}
+
+.home {
+  color: white;
+  font-weight: 600;
+}
+
+a {
+  padding: 10px;
+  list-style: none;
+  color: grey;
+  text-decoration: none;
+}
+a:hover {
+  border:1px solid white;
+}
+
+.next-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  height: 648px;
+  background-image: url("nextBackground.jpg");
+}
+
+.next-a {
+  padding: 10px;
+  list-style: none;
+  color: white;
+  text-decoration: none;
+}
+
+.next-a:hover {
+  border:1px solid white;
+}
+
+#list {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction;
+  flex-wrap: wrap;
+  padding-left: 20%;
+  align-items: stretch;
+}
+
+.next {
+  margin: 20px 0;
+}
+
+.next-date {
+  padding: 0 10px;
+  height: 40px;
+  font-size: 30px;
+  border-style: ridge;
+  border-radius: 4px;
+  border-width: thin;
+  border-color: black;
+  font-weight: 600;
+}
+
+.next-name {
+  height: 40px;
+  font-size: 30px;
+  font-weight: 600;
+}

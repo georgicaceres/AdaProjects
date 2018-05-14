@@ -1,0 +1,184 @@
+* {
+  margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: 'Varela Round', sans-serif;
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+header{
+	margin: auto;
+	width: 95%;
+	height: 90px;
+	display: flex;
+	padding: 0 15px;
+	text-align: center;
+	border-bottom: 2px solid black;
+}
+
+.logo, .cart {
+	width: 20%
+}
+
+.logo {
+	display: flex;
+	font-family: 'Varela Round', sans-serif;
+}
+
+.logo img {
+	width: 80px;
+	height: 80px;
+}
+
+h1 {
+	margin: 20px 0;
+}
+
+.searchBox {
+	margin: 20px 0;
+	width: 60%
+}
+
+.cart {
+	text-align: right;
+	margin: 20px 0;
+}
+
+#cant {
+	margin: 20px 20px;
+	font-size: 40px;
+}
+
+.fas {
+	font-size: 40px;
+	color: #4a131c;
+}
+
+.searchInput {
+	width: 80%;
+	margin: 5px auto;
+	padding: 5px 35px ;
+	height: 30px;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 12px;
+	color: white;
+	background: black;
+	border: 0;
+	border-radius: 30px;
+}
+
+.products-row{
+	display: flex;
+	justify-content: space-around;
+}
+
+.product{
+	width: 20%;
+}
+
+.descripcion {
+	color: blue;
+}
+
+.info {
+	display: flex;
+	justify-content: space-between;
+}
+.precio{
+	font-weight: bold;
+}
+
+footer{
+	margin: 20px 0;
+	height: 60px;
+	background: #4a131c;
+	text-align: center;
+}
+
+.littleImg {
+  width: 80px;
+  height: 80px;
+}
+
+#message {
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	height: 450px;
+}
+
+#shopNow, #trash {
+	width: auto;
+  height: 40px;
+  margin: 8px 0;
+  padding: 0 25px;
+  font-size: 25px;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 800;
+  color: #ecf0f1;
+  border-width: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background-color: #9c2335;
+  cursor: pointer;
+  outline: none;
+}
+
+#shopNow:hover, #shopNow:focus, #trash:hover, #trash:focus {
+  background-color: #4a131c;
+}
+
+aside {
+  width: 24%;
+  padding: 20px auto;
+  background-color: pink;
+  height: 50px;
+  text-align: center;
+}
+
+/* Auxiliar tools */
+.hide {
+  display: none;
+}
+
+.no-hide-grid {
+  display: grid;
+}
+
+.no-hide-flex {
+  display: flex;
+}
+
+#cartGrid {
+  width: 75%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-bottom: 2px solid grey;
+}
+.cartGrid {
+  margin: auto; 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 60% 8% 8% 4%;
+  grid-auto-rows: 80px;
+  grid-row-gap: 10px;
+  align-items: center;
+}
+
+.borrar {
+  margin: auto 15px;
+  font-size: 16px;
+  color: grey
+}
+
+.borrar:hover {
+  color: red;
+  cursor: pointer;
+}

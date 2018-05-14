@@ -1,0 +1,13 @@
+.comment {
+  font-weight: bold;
+  color: blue;
+  font-size: 20px
+}
+
+.name {
+  font-size: 16px;
+}
+
+.mail {
+  color: red  
+}

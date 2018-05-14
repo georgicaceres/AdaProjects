@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Formulario jQuery</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    <form id="myForm" class="flex-container" action="success.html" method="post">
+      <div class="personalData">
+        <h3>Datos Personales</h3>
+
+        <div class="colBox">
+          <label>Nombre</label>
+          <input type="text" name="nombre" class="oblig">
+          <label class="error"></label>
+        </div>
+
+        <div class="colBox">
+          <label>Apellido</label>
+          <input type="text" name="apellido" class="oblig">
+          <label class="error"></label>
+        </div>
+
+        <div class="rowBox">
+
+          <div class="colBox two">
+            <label id="addImage" for="uploadImage">AGREGAR FOTO</label>
+              <img id="uploadPreview"></img>
+              <input id="uploadImage" type="file">
+          </div>
+
+          <div class="colBox two">
+            <label>Fecha de Nacimiento</label>
+            <input id="bornDate" type="date" name="bornDate" max="2017-12-31" class="oblig">
+            <label class="error"></label>
+            <label >Tipo de documento</label>
+            <select id="docType" name="Tipo de documento"></select>
+            <label>Número de documento:</label>
+            <input id="docNumber" type="number" name="id" class="oblig">
+            <label id="invalidDoc" class="error"></label>
+          </div>
+        </div>
+
+      <div class="comments">
+        <h3>Observaciones</h3>
+        <div class="colBox" id="comments">
+          <textarea name="comments"></textarea>
+        </div>
+      </div>
+
+      <div class="rowBox">
+        <input class="check" type="checkbox" id="termycond"> &nbsp ACEPTO &nbsp <a target="_blank" href="term&cond.html">TÉRMINOS Y CONDICIONES</a>
+        <label id="termCondError"></label>
+      </div>
+
+      <label id="ageError"></label>
+
+      <div class="buttons">
+        <input id="send" type="button" value="ENVIAR!"></input>
+        <input id="clean" type="reset" value="LIMPIAR"></input>
+      </div>
+
+    </form>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

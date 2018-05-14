@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>New Birthday</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="colBox" id="textCol">
+        <h1>NUEVO CUMPLEAÑOS</h1>
+      </div>
+      <div class="colBox" id="navCol">
+        <nav id="menu" class="menu">
+          <a class="next-a" href="home.html">HOME</a>
+					<a class="next-a" href="cargar.html">CARGAR</a>
+					<a class="next-a" href="next.html">PRÓXIMOS</a>
+				</nav>
+    </header>
+    <form action="#" id="form" class="flex-container">
+        <div class="colBox">
+          <label for="">Nombre:</label>
+          <input id="name" type="text">
+          <label id="errorName"></label>
+        </div>
+        <div class="colBox">
+          <label for="">Fecha de Cumpleaños:</label>
+          <div id="birthDate">
+            <input id="day" type="number" min="1" max="31"></input>
+            <select id="month" name="month">
+              <option value="-1" disabled selected >Seleccione mes...</option>
+              <option value="1">Enero</option>
+              <option value="2">Febrero</option>
+              <option value="3">Marzo</option>
+              <option value="4">Abril</option>
+              <option value="5">Mayo</option>
+              <option value="6">Junio</option>
+              <option value="7">Julio</option>
+              <option value="8">Agosto</option>
+              <option value="9">Septiembre</option>
+              <option value="10">Octubre</option>
+              <option value="11">Noviembre</option>
+              <option value="12">Diciembre</option>
+            </select>
+          </div>
+          <label id="errorDate"></label>
+        </div>
+        <div class="colBox">
+          <label for="">Lego Elegido:</label>
+          <span id="selectImgName"></span>
+          <label id="errorImg"></label>
+        </div>
+        <div class="choose">
+          <label>Elige una imagen:</label>
+        </div>
+        <div class="grid-container" id="grid-container"></div>
+        <button id="save">GUARDAR</button>
+
+    </form>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

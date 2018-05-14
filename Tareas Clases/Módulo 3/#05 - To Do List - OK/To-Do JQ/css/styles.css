@@ -102,6 +102,7 @@ li {
   background-color: #EC5248;
 }
 
+/* Permite intercambiar el tag visible: input o span*/
 .no-edit .edit-input, .no-edit .save{
   display: none;
 }

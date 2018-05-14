@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Multa</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header>
+      <h1>ALTA MULTA TRÁNSITO</h1>
+    </header>
+    <form id="myForm" class="flex-container" action="success.html" method="post">
+      <div class="personalData">
+        <h3>Datos Personales</h3>
+
+        <div class="colBox">
+          <label>Nombre</label>
+          <input type="text" name="nombre" class="oblig">
+          <label class="error"></label>
+        </div>
+
+        <div class="colBox">
+          <label>Apellido</label>
+          <input type="text" name="apellido" class="oblig">
+          <label class="error"></label>
+        </div>
+
+        <div class="rowBox">
+          <div class="colBox two">
+            <label>Número de documento:</label>
+            <input id="docNumber" type="number" name="id" class="oblig">
+            <label id="invalidDoc" class="error"></label>
+          </div>
+          <div class="colBox two">
+            <label>Licencia de Conducir:</label>
+            <input id="docNumber" type="number" name="id" class="oblig">
+            <label id="invalidDoc" class="error"></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="carData">
+        <h3>Datos del vehículo</h3>
+        <div class="rowBox">
+          <div class="colBox two">
+            <label>Marca</label>
+              <input id='brand' type="text" name="brand" class="oblig">
+              <label class="error" type="text"></label>
+          </div>
+          <div class="rowBox">
+            <div class="colBox">
+              <label>Tipo</label>
+              <select id='type' class="oblig">
+                <option value="-1" disabled selected>Selecione tipo de vehículo</option>
+                <option value="Auto">Auto</option>
+                <option value="Camion">Camion</option>
+              </select>
+            </div>
+            <div id="ejes" class="colBox">
+              <label>Ejes</label>
+              <select class="oblig">
+                <option value="-1" disabled selected>Selecione cantidad de ejes</option>
+                <option value="1">2</option>
+                <option value="2">4</option>
+              </select>
+            </div>
+          </div>
+
+
+          </div>
+      </div>
+
+        <div class="rowBox">
+          <div class="colBox three">
+            <label >Modelo</label>
+            <input id="model" type="text" name="model">
+          </div>
+          <div class="colBox three">
+            <label >Año</label>
+            <input id='year' type="text" name="year">
+          </div>
+          <div class="colBox three">
+            <label>Patente</label>
+            <input id='patent' type="text" name="patent">
+          </div>
+        </div>
+      </div>
+
+      <div class="infractionData">
+        <h3>Infracción</h3>
+        <div class="colBox">
+          <label class="intereses">Tipo</label>
+          <div><input class="intereses" type="checkbox" name="interests" value="A"><label class="opciones">Estacionamiento rampa discapacitados</label></div>
+          <div><input class="intereses" type="checkbox" name="interests" value="A"><label class="opciones">Utilización de teléfonos móbiles al conducir</label></div>
+          <div><input class="intereses" type="checkbox" name="interests" value="A"><label class="opciones">Exceso de velocidad</label></div>
+          <div><input class="intereses" type="checkbox" name="interests" value="A"><label class="opciones">Circular por el carril exclusivo del bus</label></div>
+          <div><input class="intereses" type="checkbox" name="interests" value="A"><label class="opciones">No utilización del cinturón de seguridad</label></div>
+        </div>
+      </div>
+
+      <div class="locationData">
+        <h3>Lugar Infracción</h3>
+        <div class="rowBox">
+          <div class="colBox two">
+            <label>Calle</label>
+              <input type="text" name="street" class="oblig">
+              <label class="error" type="text"></label>
+          </div>
+
+          <div class="colBox two">
+            <label>Número/Altura</label>
+            <input type="text" name="streetNum">
+          </div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <h3>Contacto</h3>
+        <div class="rowBox">
+          <div class="colBox two">
+            <label>Teléfono:</label>
+            <input id="telNumber"type="text" name="teléfono">
+            <label id="telError"></label>
+          </div>
+          <div class="colBox two">
+            <label>E-mail:</label>
+            <input id="mail" type="email" name="email" class="oblig">
+            <label class="error" id="invalidMail"></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="comments">
+        <h3>Comentarios</h3>
+        <div class="colBox" id="comments">
+          <label class="intereses">Comentarios</label>
+            <textarea name="comments"></textarea>
+        </div>
+      </div>
+
+      <label id="ageError"></label>
+
+      <div class="buttons">
+        <input id="load" type="button" value="CARGAR!"></input>
+        <input id="clean" type="reset" value="LIMPIAR"></input>
+      </div>
+
+    </form>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/Auto.js"></script>
+    <script type="text/javascript" src="js/Camion.js"></script>
+  </body>
+</html>

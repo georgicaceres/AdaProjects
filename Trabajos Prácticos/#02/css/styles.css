@@ -113,6 +113,7 @@ body {
 
 #start:hover, #start:focus, #playAgain:hover, #playAgain:focus {
   background-color: #d35400;
+  color: black;
 }
 
 /* Board and Cards */
@@ -171,13 +172,13 @@ justify-content: center;
 
 /* Game Info (Chances and Score) */
 .info {
-  width: 30%;
+  width: 27%;
   padding-left: 10px;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   height: 40px;
-  border-radius: 15px;
+  border-radius: 18px;
   background-color: #F07210;
   color: white;
   font-family: 'Varela Round', sans-serif;

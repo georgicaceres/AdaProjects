@@ -4,7 +4,6 @@
 // Borrar el puntaje NO ELEGIDO
 // Indicar qué jugador está activo
 // Agregar indicador de estado de puntaje.
-//
 
 const dice = ['imgs/one.png','imgs/two.png','imgs/three.png','imgs/four.png','imgs/five.png','imgs/six.png'];
 const points = [20, 30, 40, 50, 60]; /////////////// acá agregué para g doble ////////

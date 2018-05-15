@@ -131,7 +131,7 @@ function start() {
   var shuffledList = shuffleArray(list);
   $.each(shuffledList, function (index, item) {
     let card = `<div id='card${index}' class='card styles click'>
-                  <div class='front no-flip'><img class='imgFront' alt='card' src='imgs/background.jpg'></div>
+                  <div class='front no-flip'><img class='imgFront' alt='card' src='imgs/back.jpg'></div>
                   <div class='back no-flip'><img class='imgBack' alt='card' src='${cards[item].img}' data-id='${cards[item].id}'></div>
                 </div>`
     $('#board').append(card);
@@ -241,6 +241,16 @@ $('#start').on('click', function() {
     start();
   } else {
     activeToggle($("#error"));
+  }
+});
+
+$('#name').on('keypress', function(event) {
+  if (event.keyCode === 13) {
+    if (name = $('#name').val()) {
+      start();
+    } else {
+      activeToggle($("#error"));
+    }
   }
 });
 

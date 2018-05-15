@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+      <meta charset="utf-8">
+      <title>Clases</title>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+      <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header>
+      <h1>¿Qué deseas comer hoy?</h1>
+    </header>
+    <div class="flex-container">
+      <form id="myForm" class="flex-form" action="" method="post">
+        <div class="colBox">
+          <label for="menu">1-Tipo de menú...</label>
+          <select name="menu" id="type">
+            <option value="-1" disabled selected>Seleccione una opción...</option>
+            <option value="1">Todos</option>
+            <option value="2">Vegano</option>
+            <option value="3">Vegetariano</option>
+            <option value="3">Apto Celíaco</option>
+          </select>
+        </div>
+        <div class="colBox">
+          <label for="first">1-Elige tu entrada...</label>
+          <select name="first" id="first">
+            <option value="" disabled selected>Seleccione una opción...</option>
+          </select>
+        </div>
+        <div class="colBox">
+          <label for="second">2- Elige tu plato principal...</label>
+          <select name="second" id="second">
+            <option value="" disabled selected>Seleccione una opción...</option>
+          </select>
+        </div>
+        <div class="colBox">
+          <label for="postre">3-¿Te aptece un postre?</label>
+          <select name="guarn" id="postre">
+            <option value="" disabled selected>Seleccione una opción...</option>
+          </select>
+        </div>
+        <div class="colBox">
+          <label for="drink">3-Elige tu bebida...</label>
+          <select name="drink" id="drink">
+            <option value="" disabled selected>Seleccione una opción...</option>
+          </select>
+        </div>
+        <input id="confirm" type="button" value="CONFIRMAR"></input>
+      </form>
+      <div class="side">
+        <div id="text-confirm">
+          <h2>TU ALMUERZO:</h2>
+          <p class="text-confirm">Principal: <span id="ppal-confirm"></span></p>
+          <p class="text-confirm">Guarnición: <span id="guarn-confirm"></span></p>
+          <p class="text-confirm">Postre: <span id="postre-confirm"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.jss"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/plato.js"></script>
+    <script type="text/javascript" src="js/dessert.js"></script>
+    <script type="text/javascript" src="js/drink.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

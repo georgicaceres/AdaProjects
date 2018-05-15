@@ -1,0 +1,150 @@
+* {
+  margin:0;
+	padding:0;
+	box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
+}
+
+body {
+  background-color: #3D3F41;
+}
+/* Main Container */
+.flex-container {
+  margin: auto;
+  width: 80%;
+  height: 620px;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-evenly;
+  border: 16px double black;
+  background-color: #607794;
+  border-radius: 32px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-family: 'Varela Round', sans-serif;
+}
+
+#board {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#diceBox {
+  width: 100%;
+  height: 480px;
+  margin: auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: url("table.jpg");
+  border-radius: 12px;
+}
+
+#score {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #779dce;
+  border-radius: 12px;
+}
+
+#roll, #ready {
+  width: auto;
+  height: 60px;
+  margin: 8px 2px;
+  padding: 0 25px;
+  font-size: 25px;
+  font-weight: 800;
+  color: #ecf0f1;
+  border-width: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background-color: #2ecc71;
+  cursor: pointer;
+  outline: none;
+}
+
+#ready {
+  background-color: #e74c3c;
+}
+
+#roll:hover, #roll:focus {
+  background-color: #27ae60;
+}
+
+#ready:hover, #ready:focus {
+  background-color: #c0392b;
+}
+
+.diceFace {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  border-radius: 8px;
+  background-color: white
+}
+
+.selected {
+  border: 4px solid black
+}
+/* .p {
+  background-color: #E1DCDC;
+} */
+.grid0 .fixed, .grid1 .fixed {
+  background-color: #D0D0D0
+}
+
+.grid0 label, .grid1 label {
+  float:left;
+  width:100%;
+  background-color:#00BFFF;
+  color: #333;
+  border:1px solid #D0D0D0;
+  overflow:auto;
+  cursor: pointer;
+}
+
+.grid0 label span, .grid1 label span {
+  text-align:center;
+  font-size: 14px;
+  display:block;
+}
+
+.grid0 label input, .grid1 label input {
+  position:absolute;
+  top:-20px;
+}
+
+.grid0 input:checked + span, .grid1 input:checked + span {
+  background-color:#404040;
+  color:#F7F7F7;
+}
+
+.grid-title p {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.grid0, .grid1, .grid-title {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  margin-bottom: 4px;
+  grid-template-columns: 100px 50px;
+  grid-row: 20px;
+}
+
+.grid0 p, .grid1 p {
+  border:1px solid #D0D0D0;
+  text-align: center;
+}

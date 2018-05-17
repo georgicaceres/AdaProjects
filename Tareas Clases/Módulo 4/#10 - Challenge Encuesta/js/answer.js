@@ -1,0 +1,6 @@
+class Answer {
+
+  constructor() {
+
+  }
+}

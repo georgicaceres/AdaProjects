@@ -1,33 +1,16 @@
 var data;
-var answerCounter = {};
-
-// Check if already exists the answer in answerCounter. That means somebody vote this before.
-function checkAnswer(answer, question) {
-  let index;
-  function test(item, ind) {
-    if (item.name == answer) {
-      index = ind;
-      return true;
-    } else {
-      return false;
-    }
-  }
-  if (!answerCounter[question]) answerCounter[question] = [];
-  if (answerCounter[question].some(test)){
-    return index;
-  } else {
-    return -1;
-  };
-}
+var savedVotes = localStorage.getItem("votes");
+var answerCounter = savedVotes ? JSON.parse(savedVotes) : {};
 
 // Function add vote
 function addVote(question, answer) {
-
+  answerCounter[question + '|' + answer] = getVote(question, answer) + 1;
+  localStorage.setItem("votes", JSON.stringify(answerCounter));
 };
 
 // Get votes
 function getVote(question, answer) {
-  return 5;
+  return answerCounter[question + '|' + answer] || 0; // When the first value is undefined return the second value
 };
 
 $( document ).ready(function() {
@@ -47,7 +30,7 @@ $( document ).ready(function() {
       let optionContainer = `<div class="optionContainer" id="optionContainer${i}"></div>`
       $('#' + i).append(optionContainer);
 
-      for (j=0; j<data[i].respuestas.length; j++) {
+      for (j = 0; j < data[i].respuestas.length; j++) {
         let option = `<label><input class="radio" type="radio" name="options${i}">${data[i].respuestas[j]}</label>`
         $('#optionContainer' + i).append(option);
       }
@@ -63,19 +46,16 @@ $(document).on('click', 'button',function(event){
  event.preventDefault();
 
  let options = $(this).siblings('.optionContainer');
- let checkedText = options.find('label input:checked').parent().text();
+ let answerText = options.find('label input:checked').parent().text();
  let questionId = parseInt(options.parent().attr('id'));
  let questionText = data[questionId].enunciado;
- if (options.find('label input:checked').length != 0 ) {
-   let index = checkAnswer(checkedText, questionText)
-   if (index == -1) {
-     let newAnswer = {name: checkedText, votes: 1 };
-     answerCounter[questionText].push(newAnswer);
-   } else {
-     answerCounter[questionText][index].votes += 1;
-     console.log(answerCounter)
-   }
-   options.find('label input:checked').prop('checked', false);
- }
+ if (options.find('label input:checked').length) {
+   addVote(questionText, answerText);
+   const mostVoted = data[questionId].respuestas
+    .map(answer => ({answer: answer, votes: getVote(questionText, answer)})) // Syntactic Sugar
+    .sort((a, b) => b.votes - a.votes)[0];
 
+   console.log(answerCounter, mostVoted);
+ }
+ options.find('label input:checked').prop('checked', false);
 })

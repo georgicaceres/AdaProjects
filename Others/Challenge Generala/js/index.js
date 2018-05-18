@@ -1,12 +1,12 @@
-
-// Agregar puntaje servido
 // Agregar Generala Doble.
 // Borrar el puntaje NO ELEGIDO
 // Indicar qué jugador está activo
 // Agregar indicador de estado de puntaje.
+// Desabilitar el tablero del jugador no activo
 
 const dice = ['imgs/one.png','imgs/two.png','imgs/three.png','imgs/four.png','imgs/five.png','imgs/six.png'];
 const points = [20, 30, 40, 50, 60]; /////////////// acá agregué para g doble ////////
+const pointsServ = [25, 35, 45, "-", "WIN"]
 var player = 0;
 var i;
 var playerClass = ["one", "two"];
@@ -72,7 +72,7 @@ function checkOthers(array, index) {
 // SCORE
 
 // Set score
-function displayScore(singles, special) {
+function displayScore(singles, special, servido) {
   $.each(singles, function(index, item) {
     let value = index + 1;
     $('.'+ playerClass[player]+'[data-code ='+ value +']').text(item);
@@ -80,7 +80,11 @@ function displayScore(singles, special) {
   $.each(special, function(index, item) {
     let value = index + 7;
     if (item == true) {
-      $('.'+ playerClass[player]+'[data-code = '+ value +']').text(points[index]);
+      if (servido == true) {
+        $('.'+ playerClass[player]+'[data-code = '+ value +']').text(pointsServ[index]);
+      } else {
+        $('.'+ playerClass[player]+'[data-code = '+ value +']').text(points[index]);
+      }
     } else {
       $('.'+ playerClass[player]+'[data-code = '+ value +']').text("0");
     }
@@ -133,7 +137,6 @@ function rollDice(n) {
 
 // Evento guardar puntaje (deshabilita el radiobutton)
 function setScore(idNumb) {
-  console.log("estoy acá")
   console.log(idNumb)
   $('.grid'+ player +' input[data-id='+ idNumb +']:radio').attr('disabled',true);
   $('.grid'+ player +' input[data-id='+ idNumb +']:radio').next().addClass('fixed');
@@ -146,20 +149,22 @@ function setScore(idNumb) {
 // Evento "tirar dados"
 $('#roll').on('click', function() {
   if (chances > 0) {
+    let servido = false;
     const diceValue = [1, 2, 3, 4, 5, 6];
     let numberOfDices = 5 - $('.selected').length;
     refreshArray();
     playSound();
     rollDice(numberOfDices);
-    console.log(results);
     let singles = diceValue.map(item => checkOthers(results, item));
     let special = [checkEscalera(results), checkFull(results), checkPoker(results), checkGenerala(results)];
     console.log("puntos simples:", singles, "resultado figuras:", special)
-    displayScore(singles, special);
+    if (chances == 3 && special.some(Boolean)) {
+      servido = true;
+    }
+    displayScore(singles, special, servido);
   } else {
     $("#roll").prop("disabled", true);
     console.log('Elija su puntaje y presione listo')
-    // changePlayer()
   };
   chances--;
 });

@@ -7,7 +7,7 @@
 body {
   /* background-color: #3D3F41; */
   padding: 1%;
-  background-image: url("12207.jpg");
+  background-image: url("../imgs/12207.jpg");
 }
 
 /* Main Container */
@@ -167,7 +167,7 @@ justify-content: center;
 
 .imgFront, .imgBack {
   width: 140px;
-  height: 140px;
+  /* height: 140px; */
 }
 
 /* Game Info (Chances and Score) */
@@ -235,7 +235,32 @@ justify-content: center;
   }
 
   #board {
-    grid-template-columns: repeat(3, 80px);
-    grid-auto-rows: repeat(4, 80px);
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(4, 30%);
+    grid-gap: 8px;
+    justify-content: center;
+  }
+
+  .card, .styles {
+    margin-bottom: 100%;
+  }
+
+  .imgFront, .imgBack {
+    width: 100%;
+  }
+
+  #counter, #score{
+    width: 40px;
+    height: 40px;
+  }
+
+  .info {
+    width: 40%;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  #dialogResult {
+    width: 90%;
   }
 }

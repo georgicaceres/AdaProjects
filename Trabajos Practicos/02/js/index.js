@@ -32,7 +32,6 @@ var cards = [ {
   id: "card_5"
 }];
 
-
 // Initial Logo & Charging Bar Animation
 function chargeBar() {
   let width = 1;
@@ -49,18 +48,18 @@ function chargeBar() {
       $('#bar').css('width', width + '%');
     }
   }
-}
+};
 
 // AUXILIAR FUNCTIONS
 
 // Make sure there are no html tags in user inputs. Prevents XSS hacking
 function escapeHtml(str) {
-    var div = document.createElement('div');
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-}
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
-// Create an array of indexs where every one appear twice.
+// Create an array of indexs where every one appears twice.
 function listOfIndexs(size) {
   let list = [];
   for (let i = 0; i < size; i++) {
@@ -68,9 +67,9 @@ function listOfIndexs(size) {
     list.push(i);
   };
   return list
-}
+};
 
-// Return a new ARRAY with the elements of @param array list shuffled.
+// Return a new array with the elements of @param array list shuffled.
 function shuffleArray(list) {
   var shuffleList = [];
   while (list.length != 0) {
@@ -79,15 +78,15 @@ function shuffleArray(list) {
     list.splice(randomIndex, 1);
   }
   return shuffleList;
-}
+};
 
-// Change visible/invisible
+// Add class that change visible/invisible
 function activeToggle(item) {
   item.toggleClass('hide');
   item.toggleClass('no-hide');
-}
+};
 
-// Set New player in localStorage
+// Set new player in localStorage
 function newPlayerInfo(userName, userScore) {
   let newPlayer = {
     player: userName,
@@ -100,7 +99,7 @@ function newPlayerInfo(userName, userScore) {
     "total": arrayInfoPlayer.length
   };
   localStorage.setItem("jsonScores", JSON.stringify(jsonScores));
-}
+};
 
 // Flip effect on cards
 function flipCard(select) {
@@ -108,12 +107,12 @@ function flipCard(select) {
   select.children('.front').toggleClass("no-flip");
   select.children('.back').toggleClass("flip");
   select.children('.back').toggleClass("no-flip");
-}
+};
 
 // Turn on/of listener when clicked
 function unclickeable(select) {
   select.removeClass('card');
-}
+};
 
 function clickeable(select) {
   select.addClass('card');
@@ -131,13 +130,16 @@ function start() {
   var shuffledList = shuffleArray(list);
   $.each(shuffledList, function (index, item) {
     let card = `<div id='card${index}' class='card styles click'>
-                  <div class='front no-flip'><img class='imgFront' alt='card' src='imgs/back.jpg'></div>
-                  <div class='back no-flip'><img class='imgBack' alt='card' src='${cards[item].img}' data-id='${cards[item].id}'></div>
-                </div>`
+                  <div class='front no-flip'>
+                    <img class='imgFront' alt='card' src='imgs/back.jpg'>
+                  </div>
+                  <div class='back no-flip'>
+                    <img class='imgBack' alt='card' src='${cards[item].img}' data-id='${cards[item].id}'>
+                  </div>
+                </div>`;
     $('#board').append(card);
   });
 };
-
 
 // Click a card
 function cardClick(item) {
@@ -187,8 +189,12 @@ function cardClick(item) {
 function youLoose() {
   activeToggle($('#dialogResult'));
   $('#board').css('display', 'none');
-  let message = `<p id='result'>You ran out of moves!</p>
-  <button id="playAgain" type="button" name="playAgain">PLAY AGAIN</button>`;
+  let message = `<p id='result'>
+                  You ran out of moves!
+                </p>
+                <button id="playAgain" type="button" name="playAgain">
+                  PLAY AGAIN
+                </button>`;
   $('#textResult').html(message);
   $('#positionGrid').css('display', 'none');
 }
@@ -197,9 +203,15 @@ function youLoose() {
 function youWin() {
   activeToggle($('#dialogResult'));
   $('#board').css('display', 'none');
-  let message = `<p id='result'>Congrats ${name}! You win with ${$('#score').text()} pts!</p>
-                  <button id="playAgain" type="button" name="playAgain">PLAY AGAIN</button>
-                  <p class='bestScores'>BEST SCORES:</p>`;
+  let message = `<p id='result'>
+                  Congrats ${name}! You win with ${$('#score').text()} pts!
+                </p>
+                <button id="playAgain" type="button" name="playAgain">
+                  PLAY AGAIN
+                </button>
+                <p class='bestScores'>
+                  BEST SCORES:
+                </p>`;
   $('#textResult').html(message);
   $('#positionGrid').css('display', 'grid');
   loadScores();
@@ -244,6 +256,7 @@ $('#start').on('click', function() {
   }
 });
 
+// Evento on enter key
 $('#name').on('keypress', function(event) {
   if (event.keyCode === 13) {
     if (name = $('#name').val()) {

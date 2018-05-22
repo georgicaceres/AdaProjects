@@ -134,6 +134,7 @@ body {
   padding: 2px 2px;
   background-color: black;
   border-radius: 80%;
+  cursor: pointer;
 }
 
 .fa, .fas {

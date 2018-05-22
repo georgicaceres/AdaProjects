@@ -5,7 +5,6 @@
 }
 
 body {
-  /* background-color: #3D3F41; */
   height: 100vh;
   padding: 1%;
   background-image: url("../imgs/background.jpg");
@@ -225,11 +224,12 @@ justify-content: center;
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width : 320px) and (max-width : 768px) {
+
   .flex-container {
     width: 100%;
   }
 
-  #dialogBox {
+  #dialogBox, #dialogResult, #logo {
     width: 90%;
   }
 
@@ -237,7 +237,6 @@ justify-content: center;
     grid-template-columns: repeat(3, 30%);
     grid-template-rows: repeat(4, 30%);
     grid-gap: 8px;
-    justify-content: center;
   }
 
   .card, .styles {
@@ -259,11 +258,4 @@ justify-content: center;
     font-size: 16px;
   }
 
-  #dialogResult {
-    width: 90%;
-  }
-
-  #logo {
-    width: 90%;
-  }
 }

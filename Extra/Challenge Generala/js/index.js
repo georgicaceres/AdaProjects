@@ -22,54 +22,41 @@ function changePlayer() {
   $(".selected").removeClass("selected");
 }
 
-// --------------CHECK FIGURES (true or false)-------------- //
+// --------------CHECK FIGURES (boolean)-------------- //
 
 // Check Generala
 function checkGenerala(array) {
-  if (array[0] === array[4]) {
-    return true
-  } else {
-    return false
-  }
+  return (array[0] === array[4]);
 }
 
 // Chequear Escalera
 function checkEscalera(array) {
   for (i = 0; i < 4; i++) {
     if (array[i+1] - array[i] != 1) {
-      return false
+      return false;
     }
   }
-  return true
+  return true;
 }
 
 // Chequear Póker
 function checkPoker(array) {
-  if (array[0] == array[3] || array[1] == array [4]) {
-    return true
-  } else {
-    return false
-  }
+  return (array[0] == array[3] || array[1] == array [4]);
 }
 
 // Check Full
 function checkFull(array) {
-  if (array[0] == array[1] && array[2] == array[4] || array[0] == array[2] && array[3] == array[4] ) {
-    return true
-  } else {
-    return false
-  }
+  return (
+    (array[0] == array[1] && array[2] == array[4]) ||
+    (array[0] == array[2] && array[3] == array[4])
+  );
 };
 
 // Check others
 function checkOthers(array, index) {
-  score = array.filter( (item) => item == index)
-  .reduce((sum, item) => (sum + item), 0);
-  // console.log(score)
-  return score
+  return array.filter( (item) => item == index)
+  .length * index;
 }
-
-// SCORE
 
 // Set score
 function displayScore(singles, special, servido) {
@@ -90,20 +77,12 @@ function displayScore(singles, special, servido) {
     }
   })
 
-  for (i=0; i < 6; i++) {
+  for (i=0; i < 11; i++) {
     let value = i + 1;
     if (finalScore[player][i] != 0) {
-      $('.'+ playerClass[player]+'[data-code ='+ value +']').text(finalScore[player][i])
+      $('.'+ playerClass[player]+'[data-code ='+ value +']').text(finalScore[player][i]);
     }
   };
-
-  for (i=6; i < 11; i++) {
-    let value = i + 1;
-    if (finalScore[player][i] != 0) {
-      $('.'+ playerClass[player]+'[data-code ='+ value +']').text(finalScore[player][i])
-    }
-  };
-
 }
 
 // Play Sound when roll dices
@@ -112,7 +91,7 @@ function playSound() {
   rollSound.play()
 }
 
-// Recreate results with only elements selected
+// Keep only selected dices when roll again
 function refreshArray() {
   results= [];
   $('#diceBox :not(.selected)').remove();
@@ -124,7 +103,7 @@ function refreshArray() {
   }
 }
 
-// Roll n dices
+// Roll n dices and show them.
 function rollDice(n) {
   for (let j = 0; j < n; j++) {
     let randomValue = Math.floor(Math.random() * dice.length);
@@ -135,18 +114,18 @@ function rollDice(n) {
   return results = results.sort()
 }
 
-// Evento guardar puntaje (deshabilita el radiobutton)
+// Save selected score and disable its radio button
 function setScore(idNumb) {
-  console.log(idNumb)
-  $('.grid'+ player +' input[data-id='+ idNumb +']:radio').attr('disabled',true);
-  $('.grid'+ player +' input[data-id='+ idNumb +']:radio').next().addClass('fixed');
-  $('.grid'+ player +' input[data-id='+ idNumb +']:radio').addClass('fixed');
-  $('.grid'+ player +' input[data-id='+ idNumb +']:radio').prop('checked', false);
+  let radioSelected = $('.grid'+ player +' input[data-id='+ idNumb +']:radio')
+  radioSelected.attr('disabled',true);
+  radioSelected.next().addClass('fixed');
+  radioSelected.addClass('fixed');
+  radioSelected.prop('checked', false);
   changePlayer()
   $("#roll").prop("disabled",false);
 }
 
-// Evento "tirar dados"
+// Event roll dices
 $('#roll').on('click', function() {
   if (chances > 0) {
     let servido = false;

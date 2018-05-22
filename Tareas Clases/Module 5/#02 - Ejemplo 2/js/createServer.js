@@ -1,8 +1,16 @@
 var http = require('http');
+var port = 8080;
+// var mimodulo = require('./modules/functions')
+
+
 http.createServer(function (req, res) {
+
   res.writeHead(200, {'Content-Type': 'text/html'});
-  res.write('Hola mundos!');
-  // Creo el servidor
+
+
+
+  res.write('?');
+
   res.end()
 
-}).listen(8080);
+}).listen(port);
